@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Header from './components/header';
+import Footer from './components/footer';
+import LoginPage from './views/login-page';
+import Orderpage from './views/orders-page';
+import {Routes, Route, Navigate} from 'react-router-dom'
+import PrivateRoutes from './utils/private-route';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-layout'>
+      <Header/>
+      <section className='route-section'>
+        <Routes>
+          <Route path='/' element={<LoginPage/>}/>
+          <Route element={<PrivateRoutes/>}>
+          <Route path='/dashboard' element={<Orderpage/>}/>
+          <Route path="*" element={<Navigate to='/dashboard' replace />}/>
+        </Route>
+         
+        </Routes>
+      </section>
+     <Footer/>
     </div>
   );
 }

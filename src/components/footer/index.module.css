@@ -1,0 +1,9 @@
+.footer-section{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(204, 199, 199);
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    min-height: 5rem;
+}

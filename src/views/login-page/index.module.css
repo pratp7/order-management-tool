@@ -1,0 +1,84 @@
+.login-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('/src/assets/oms-landing.jpg');
+    background-size: cover;
+    background-position:center;
+    min-height: 85vh;
+    box-shadow: inset 10px 10px 10px 1000px rgba(0,0,0,.2);
+}
+
+.summary{
+    width: 90%;
+    max-width: 45rem;
+    color: rgb(230, 223, 223);
+    font-size: large;
+}
+
+.login-form-layout {
+    position: relative;
+    padding: 50px 50px;
+    background: #fff;
+    border-radius: 10px;
+
+}
+
+.login-form-layout h2{
+    font-size: 2em;
+    border-left: 5px solid dodgerblue;
+    padding: 10px;
+    color: #000;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.login-form-layout .inputbox {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .login-form-layout .inputbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+  .login-form-layout .inputbox:last-child {
+    margin-bottom: 0;
+  }
+  .login-form-layout .inputbox span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+  }
+  .login-form-layout .inputbox input:focus ~ span,
+  .login-form-layout .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+  .login-form-layout button {
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .login-form-layout button:hover {
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+  }
+  
